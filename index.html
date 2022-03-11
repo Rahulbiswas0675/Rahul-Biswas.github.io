@@ -343,53 +343,50 @@
 
     <div class="from">
         <h2>Send Massage</h2>
-        <from action="script:sendmail()" method="post">
+        <from method="post">
             <p class="for">*Name  <input type="text" name="name" id="name" placeholder="Your name"></p>
             <p class="for">*Mobile<input type="phone" name="number" id="number"  placeholder="Your mobile number"></p>
             <p class="for">*Email <input type="email" name="email" id="email"  placeholder="Your email address"></p>
             <p class="for">Massage<input type="text" name="massage" id="massage"  placeholder="Your massage"></p>
             <br>
-            <button onclick="popUp()" class="submit" id="submit" value="submit">Submit</button>
+            <button  class="submit" id="submit" value="submit">Submit</button>
         </from>
     </div>
 
 </div>
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
-    function popUp(){
-        var name = $("#name") .val();
-        var email = $("#email") .val();
-        var number = $("#number") .val();
-        var massage = $("#massage") .val();
-        if(name == '' || email == '' || number == '' || massage == ''){
+                    <!--==Sendmassage=js=link===-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                    <!--==sweetalert=js=link===-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+       <!--====javascript==function====-->
+    <script>
+        
+         const btn = document.querySelector("button")
+         const input = document.querySelector('from')
+         btn.addEventListener('click', () => {
+            var name = $("#name") .val();
+            var email = $("#email") .val();
+            var number = $("#number") .val();
+            var massage = $("#massage") .val();
+            var body = '#name: '+name +'<br>#email: '+email +'<br>#number: '+number +'<br>#massage: '+ massage;
+    
+            Email.send({
+                SecureToken :"65e62344-2f2a-45d9-b41d-25b4a6efd7c6",
+                To : 'rahulofficial@gmail.com',
+                From : "mailbox0675@gmail.com",
+                Subject : "New Mail On Contact From"+ name,
+                Body : body
+            }).then
+                if(name == '' || email == '' || number == '' || massage == ''){
 
-            swal("Sorry!", "Please check the missing field", "warning");
-        }else{
-            swal("Thank You!", "You massage sending Successful!", "success");
-        }
-    }
-
-    // function sendmail(){
-    //     var name = $("#name") .value();
-    //     var email = $("#email") .value();
-    //     var number = $("#number") .value();
-    //     var massage = $("#massage") .value();
-    //     var body = '#name: '+'<br>#email: '+'<br>#number: '+'<br>#massage: ';
-
-    //     Email.send({
-    //         SecureToken : "b3b204f7-d833-45f4-883d-9047b76a1305",
-    //         Host : "smtp.elasticemail.com",
-    //         To : 'rahulofficial@gmail.com',
-    //         From : "mailbox0675@gmail.com",
-    //         Subject : "New Mail On Contact From",
-    //         Body : body
-    //     }).then(
-    //         alert("Thank You!", "You massage sending Successful!", "success"
-    //     )     
-    // }
-</script>
+                    swal("Sorry!", "Please check the missing field", "warning");
+                    }else{
+                    swal("Thank You!", "You massage sending Successful!", "success" );
+                }  
+        })
+    </script>
 <footer class="end">
     <p>Copyright@2022 rahul-biswas.netlify.app | This Page Created By <span>Rahul </span>| All Rights Reserved </p>
 </footer>
