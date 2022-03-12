@@ -343,7 +343,7 @@
 
     <div class="from">
         <h2>Send Massage</h2>
-        <from method="post">
+        <from action="javascript:Email.send" method="post">
             <p class="for">*Name  <input type="text" name="name" id="name" placeholder="Your name"></p>
             <p class="for">*Mobile<input type="phone" name="number" id="number"  placeholder="Your mobile number"></p>
             <p class="for">*Email <input type="email" name="email" id="email"  placeholder="Your email address"></p>
@@ -371,19 +371,19 @@
             var number = $("#number") .val();
             var massage = $("#massage") .val();
             var body = '#name: '+name +'<br>#email: '+email +'<br>#number: '+number +'<br>#massage: '+ massage;
-    
+            if(name == '' || email == '' || number == '' || massage == ''){
+                swal("Sorry!", "Please check the missing field", "warning");
+                    }else{
             Email.send({
                 SecureToken :" b32dd9d4-e25b-4624-adcc-1dfa96b56d70",
                 Host : "smtp.gmail.com",
-                To : 'rahulofficial@gmail.com',
+                Username : "mailbox0675@gmail.com",
+                Password : "Rahulbiswas1998@",
+                To : 'rahulofficial0675@gmail.com',
                 From : "mailbox0675@gmail.com",
                 Subject : "New Mail On Contact From"+ name,
                 Body : body
             }).then
-                if(name == '' || email == '' || number == '' || massage == ''){
-
-                    swal("Sorry!", "Please check the missing field", "warning");
-                    }else{
                     swal("Thank You!", "You massage sending Successful!", "success" );
                 }  
         })
