@@ -1200,19 +1200,19 @@ ion-icon{
         width: 80%;
         margin-left: 10%;
     }
-    .profile h1:hover{
+/*     .profile h1:hover{
         transform: scale(1);
         margin-left: 0;
-    }
+    } */
     .profile .contact{
         text-align: center;
         margin-left: 0;
         width: 100%;
         margin-top: 2rem !important;
     }
-    .contact:hover{
+/*     .contact:hover{
         transform: scale(1);
-    }
+    } */
     .contact a{
         font-size: 1.2rem;
     }
@@ -1670,10 +1670,10 @@ ion-icon{
         margin-top: 12rem;
         font-size: 3rem;
     }
-    .profile h3:hover{
+/*     .profile h3:hover{
         transform:scale(1.3);
         margin-left: 0;
-    }
+    } */
     .profile h2{
         font-size: 3rem !important;
         margin-top: -2rem !important;
@@ -1685,19 +1685,19 @@ ion-icon{
         font-size: 2rem;
         width: 95%;
     }
-    .profile h1:hover{
+/*     .profile h1:hover{
         transform: scale(1);
         margin-left: 0;
-    }
+    } */
     .profile .contact{
         text-align: center;
         margin-left: 0;
         width: 100%;
         margin-top: 2rem !important;
     }
-    .contact:hover{
+/*     .contact:hover{
         transform: scale(1);
-    }
+    } */
     .contact a{
         font-size: 1.5rem;
     }
@@ -2145,10 +2145,10 @@ ion-icon{
         margin-top: 12rem;
         font-size: 3.5rem;
     }
-    .profile h3:hover{
+/*     .profile h3:hover{
         transform:scale(1.3);
         margin-left: 0;
-    }
+    } */
     .profile h2{
         font-size: 3rem !important;
         margin-top: -4rem !important;
@@ -2160,19 +2160,19 @@ ion-icon{
         font-size: 2.5rem;
         width: 70%;
     }
-    .profile h1:hover{
+/*     .profile h1:hover{
         transform: scale(1);
         margin-left: 0;
-    }
+    } */
     .profile .contact{
         text-align: center;
         margin-left: 2%;
         width: 100%;
         margin-top: 0rem !important;
-    }
+/*     }
     .contact:hover{
         transform: scale(1);
-    }
+    } */
     .contact a{
         font-size: 1.6rem;
     }
