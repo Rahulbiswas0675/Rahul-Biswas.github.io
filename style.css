@@ -1639,7 +1639,7 @@ ion-icon{
 
 /*====2nd=mobile view====*/
 
-@media (min-width:425px) and (max-width: 750px){
+@media (min-width:425px) and (max-width: 768px){
    
     /*==========navbar==========*/
     .menu{
