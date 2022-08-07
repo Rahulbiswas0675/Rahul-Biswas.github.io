@@ -216,9 +216,9 @@ body {
 }
 .about-right{
   padding: 8px;
-  border: 1px solid black;
+/*   border: 1px solid black; */
   border-radius: 5px;
-  box-shadow: 3px 3px 3px goldenrod;
+  box-shadow: 3px 3px 3px rgba(146, 142, 142, 0.63);
 }
 .about-right-head{
   font-size: 28px;
